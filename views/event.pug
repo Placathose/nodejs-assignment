@@ -1,0 +1,11 @@
+extends common/layout
+
+block layout-content 
+  .main-content 
+    h1.page-title Coming Events
+    each event in events
+      div 
+        h2 #{event.name},
+        p #{event.date} (#{event.location})
+        p #{event.description}
+        a(href=event.ticketLink) Tickets

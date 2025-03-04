@@ -1,0 +1,11 @@
+extends common/layout
+
+block layout-content 
+  .main-content 
+    h1.page-title Artist Portrait
+    each artist in artists
+      div 
+        h2 #{artist.name},
+        p #{artist.biography} (#{artist.genre})
+          each album in artist.releases
+            p #{album.name}
