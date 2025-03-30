@@ -7,8 +7,8 @@ const getAllArtists = async (request, response) => {
     await db.initializeArtists(); 
     artistList = await db.getArtists();
   }
-  response.render("index", { artists: artistList });
-  // response.json(artistList)
+  // response.render("index", { artists: artistList });
+  response.json(artistList)
 }
 
 const getAllEvents = async (request, response) => {
@@ -18,7 +18,8 @@ const getAllEvents = async (request, response) => {
     await db.initializeEvents();
     eventList = await db.getEvents();
   }
-  response.render("event", { events: eventList })
+  // response.render("event", { events: eventList })
+  response.json(eventList)
 }
 
 

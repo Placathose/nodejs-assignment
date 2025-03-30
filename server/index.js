@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 
 // load env variables
 dotenv.config();
-const db = require("./components/artist/model");
+const db = require("../components/artist/model");
 const { request } = require("http");
 
 // set uo app & port
@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // use pages routes from routers
-app.use("/", require("./components/artist/routes"));
+app.use("/", require("../components/artist/routes"));
 // app.use("/user", require("./components/user/routes"));
 
 
